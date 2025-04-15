@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Roadmaps - CareerCrafter</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/browse.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <header>
+        <div class="logo">
+            <span class="logo-icon"><i class="fas fa-road"></i></span>
+            <h1>CareerCrafter</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html" class="active">Browse Roadmaps</a></li>
+                <li><a href="chatbot.html">AI Career Assistant</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="browse-hero">
+            <div class="browse-hero-content">
+                <h1>Explore Roadmaps</h1>
+                <p>Find detailed step-by-step guides for your dream career</p>
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="roadmap-search" placeholder="Search for a career roadmap...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <h3>Categories</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" value="tech" checked>
+                            <span class="checkmark"></span>
+                            Technology
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="data" checked>
+                            <span class="checkmark"></span>
+                            Data Science
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="design" checked>
+                            <span class="checkmark"></span>
+                            Design
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="marketing" checked>
+                            <span class="checkmark"></span>
+                            Marketing
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="business" checked>
+                            <span class="checkmark"></span>
+                            Business
+                        </label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Experience Level</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" value="beginner" checked>
+                            <span class="checkmark"></span>
+                            Beginner
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="intermediate" checked>
+                            <span class="checkmark"></span>
+                            Intermediate
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="advanced" checked>
+                            <span class="checkmark"></span>
+                            Advanced
+                        </label>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Time Commitment</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" value="short" checked>
+                            <span class="checkmark"></span>
+                            3-6 months
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="medium" checked>
+                            <span class="checkmark"></span>
+                            6-12 months
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="long" checked>
+                            <span class="checkmark"></span>
+                            1+ years
+                        </label>
+                    </div>
+                </div>
+                <button id="clear-filters" class="btn small-btn">Clear Filters</button>
+            </div>
+        </section>
+
+        <section class="roadmaps-grid-section">
+            <div class="roadmaps-header">
+                <h2>All Roadmaps</h2>
+                <div class="roadmaps-count">Showing <span id="roadmaps-count">12</span> roadmaps</div>
+                <div class="sort-dropdown">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select">
+                        <option value="popular">Most Popular</option>
+                        <option value="newest">Newest</option>
+                        <option value="a-z">A-Z</option>
+                        <option value="z-a">Z-A</option>
+                    </select>
+                </div>
+            </div>
+            <div class="roadmaps-grid" id="roadmaps-grid">
+                <!-- Roadmap cards will be dynamically inserted here -->
+            </div>
+            <div class="no-results" id="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No roadmaps found</h3>
+                <p>Try adjusting your search or filters</p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Can't Find What You're Looking For?</h2>
+                <p>Our AI Career Assistant can help you discover the perfect path for your goals and interests</p>
+                <a href="chatbot.html" class="btn primary-btn">Chat with AI Assistant</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fas fa-road"></i></span>
+                    <h2>CareerCrafter</h2>
+                </div>
+                <p>Guiding your professional journey with step-by-step career roadmaps and resources.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Roadmaps</a></li>
+                    <li><a href="chatbot.html">AI Career Assistant</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section categories">
+                <h3>Career Categories</h3>
+                <ul>
+                    <li><a href="browse.html?category=tech">Technology</a></li>
+                    <li><a href="browse.html?category=data">Data Science</a></li>
+                    <li><a href="browse.html?category=design">Design</a></li>
+                    <li><a href="browse.html?category=marketing">Marketing</a></li>
+                    <li><a href="browse.html?category=business">Business</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest roadmaps and career tips</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn small-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CareerCrafter. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/browse.js"></script>
+</body>
+</html>

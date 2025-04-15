@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCrafter - Your Path to Success</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <header>
+        <div class="logo">
+            <span class="logo-icon"><i class="fas fa-road"></i></span>
+            <h1>CareerCrafter</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="browse.html">Browse Roadmaps</a></li>
+                <li><a href="chatbot.html">AI Career Assistant</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="animate-text">Your Journey to Career Success Starts Here</h1>
+                <p class="animate-text-delay">Discover step-by-step roadmaps to achieve your professional goals</p>
+                <div class="cta-buttons">
+                    <a href="browse.html" class="btn primary-btn">Explore Roadmaps</a>
+                    <a href="chatbot.html" class="btn secondary-btn">Get AI Guidance</a>
+                </div>
+            </div>
+            <div class="hero-3d-container" id="hero-3d"></div>
+        </section>
+
+        <section class="featured-roadmaps">
+            <h2>Popular Career Paths</h2>
+            <div class="roadmap-cards">
+                <div class="roadmap-card" data-category="tech">
+                    <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Software Developer</h3>
+                    <p>Master programming fundamentals and build a career in software development</p>
+                    <a href="roadmaps/software-developer.html" class="btn small-btn">View Roadmap</a>
+                </div>
+                <div class="roadmap-card" data-category="data">
+                    <div class="card-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Scientist</h3>
+                    <p>Learn statistics, machine learning, and data visualization</p>
+                    <a href="roadmaps/data-scientist.html" class="btn small-btn">View Roadmap</a>
+                </div>
+                <div class="roadmap-card" data-category="tech">
+                    <div class="card-icon"><i class="fas fa-server"></i></div>
+                    <h3>DevOps Engineer</h3>
+                    <p>Bridge development and operations with automation and CI/CD</p>
+                    <a href="roadmaps/devops-engineer.html" class="btn small-btn">View Roadmap</a>
+                </div>
+                <div class="roadmap-card" data-category="ai">
+                    <div class="card-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI Specialist</h3>
+                    <p>Dive into artificial intelligence, neural networks, and deep learning</p>
+                    <a href="roadmaps/ai-specialist.html" class="btn small-btn">View Roadmap</a>
+                </div>
+            </div>
+            <div class="view-all-container">
+                <a href="browse.html" class="view-all-link">View All Roadmaps <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>How CareerCrafter Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-search"></i></div>
+                    <h3>Explore Roadmaps</h3>
+                    <p>Browse through our collection of career roadmaps or use our AI assistant to find your path</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3>Follow Your Path</h3>
+                    <p>Each roadmap provides detailed steps with resources, tutorials, and projects</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Learn & Practice</h3>
+                    <p>Access curated learning materials and complete projects to build your skills</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>Achieve Your Goals</h3>
+                    <p>Track your progress and celebrate as you reach career milestones</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>Success Stories</h2>
+            <div class="testimonial-slider" id="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Following the Full Stack Developer roadmap helped me transition from a junior to a senior role in just 18 months. The project suggestions were particularly valuable!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JS</div>
+                            <div class="author-info">
+                                <h4>James Smith</h4>
+                                <p>Senior Developer at TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The AI Career Assistant helped me discover my passion for data science. I was lost about which direction to take, but now I'm confidently building my skills!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AP</div>
+                            <div class="author-info">
+                                <h4>Aisha Patel</h4>
+                                <p>Junior Data Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The DevOps roadmap was incredibly comprehensive. The free resources saved me thousands on courses, and I landed my dream job after completing just 70% of the path!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">ML</div>
+                            <div class="author-info">
+                                <h4>Miguel Lopez</h4>
+                                <p>Cloud Infrastructure Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button id="prev-testimonial" class="slider-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots" id="slider-dots"></div>
+                <button id="next-testimonial" class="slider-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Start Your Career Journey?</h2>
+                <p>Explore our roadmaps or get personalized guidance from our AI assistant</p>
+                <div class="cta-buttons">
+                    <a href="browse.html" class="btn primary-btn">Browse Roadmaps</a>
+                    <a href="chatbot.html" class="btn secondary-btn">Chat with AI Assistant</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fas fa-road"></i></span>
+                    <h2>CareerCrafter</h2>
+                </div>
+                <p>Guiding your professional journey with step-by-step career roadmaps and resources.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Roadmaps</a></li>
+                    <li><a href="chatbot.html">AI Career Assistant</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section categories">
+                <h3>Career Categories</h3>
+                <ul>
+                    <li><a href="browse.html?category=tech">Technology</a></li>
+                    <li><a href="browse.html?category=data">Data Science</a></li>
+                    <li><a href="browse.html?category=design">Design</a></li>
+                    <li><a href="browse.html?category=marketing">Marketing</a></li>
+                    <li><a href="browse.html?category=business">Business</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest roadmaps and career tips</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn small-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CareerCrafter. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Assistant - CareerCrafter</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <header>
+        <div class="logo">
+            <span class="logo-icon"><i class="fas fa-road"></i></span>
+            <h1>CareerCrafter</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse Roadmaps</a></li>
+                <li><a href="chatbot.html" class="active">AI Career Assistant</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="chatbot-container">
+            <div class="chatbot-sidebar">
+                <div class="sidebar-header">
+                    <h2>Career Assistant</h2>
+                    <button id="new-chat" class="btn small-btn"><i class="fas fa-plus"></i> New Chat</button>
+                </div>
+                <div class="chat-history">
+                    <h3>Recent Conversations</h3>
+                    <ul id="chat-history-list">
+                        <li class="active"><i class="fas fa-comment"></i> Current Session</li>
+                        <!-- Previous chats will be added here dynamically -->
+                    </ul>
+                </div>
+                <div class="sidebar-footer">
+                    <div class="assistant-info">
+                        <div class="assistant-avatar">
+                            <div class="avatar-3d" id="avatar-3d"></div>
+                        </div>
+                        <div class="assistant-details">
+                            <h3>CareerBot</h3>
+                            <p>AI Career Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-main">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message bot-message">
+                            <div class="message-avatar">
+                                <div class="bot-avatar"></div>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">
+                                    <p>👋 Hello! I'm your AI Career Assistant. I can help you:</p>
+                                    <ul>
+                                        <li>Discover career paths that match your skills and interests</li>
+                                        <li>Provide guidance on specific career transitions</li>
+                                        <li>Recommend roadmaps based on your goals</li>
+                                        <li>Answer questions about different professions</li>
+                                    </ul>
+                                    <p>What would you like help with today?</p>
+                                </div>
+                                <div class="message-time">Just now</div>
+                            </div>
+                        </div>
+                        <div class="suggested-prompts">
+                            <button class="prompt-btn">I'm not sure which career path to choose</button>
+                            <button class="prompt-btn">How do I become a Data Scientist?</button>
+                            <button class="prompt-btn">I want to transition from marketing to UX design</button>
+                            <button class="prompt-btn">What skills do I need for a career in AI?</button>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <form id="chat-form">
+                            <div class="chat-input-wrapper">
+                                <textarea id="chat-input" placeholder="Type your message here..." rows="1"></textarea>
+                                <button type="submit" class="send-btn"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                        <div class="input-features">
+                            <button class="feature-btn" title="Upload File"><i class="fas fa-paperclip"></i></button>
+                            <button class="feature-btn" title="Record Audio"><i class="fas fa-microphone"></i></button>
+                            <div class="typing-indicator">AI is thinking<span class="dots"><span>.</span><span>.</span><span>.</span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-info">
+                <div class="info-section">
+                    <h3>How It Works</h3>
+                    <p>Our AI Career Assistant uses natural language processing to understand your career goals and provide personalized guidance.</p>
+                    <div class="info-steps">
+                        <div class="info-step">
+                            <div class="step-number">1</div>
+                            <p>Share your background, skills, and interests</p>
+                        </div>
+                        <div class="info-step">
+                            <div class="step-number">2</div>
+                            <p>Ask specific questions about career paths</p>
+                        </div>
+                        <div class="info-step">
+                            <div class="step-number">3</div>
+                            <p>Get personalized recommendations and advice</p>
+                        </div>
+                        <div class="info-step">
+                            <div class="step-number">4</div>
+                            <p>Explore suggested roadmaps and resources</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-section">
+                    <h3>Example Questions</h3>
+                    <ul class="example-questions">
+                        <li>"What career paths match my background in psychology?"</li>
+                        <li>"How can I transition from teaching to instructional design?"</li>
+                        <li>"What skills should I develop to become a cloud architect?"</li>
+                        <li>"Which certifications are most valuable for a cybersecurity career?"</li>
+                        <li>"What's the difference between data analyst and data scientist roles?"</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>Privacy Note</h3>
+                    <p>Your conversations are used to improve our AI assistant. You can request to delete your chat history at any time.</p>
+                    <a href="#" class="text-link">Learn more about our privacy policy</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fas fa-road"></i></span>
+                    <h2>CareerCrafter</h2>
+                </div>
+                <p>Guiding your professional journey with step-by-step career roadmaps and resources.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Roadmaps</a></li>
+                    <li><a href="chatbot.html">AI Career Assistant</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section categories">
+                <h3>Career Categories</h3>
+                <ul>
+                    <li><a href="browse.html?category=tech">Technology</a></li>
+                    <li><a href="browse.html?category=data">Data Science</a></li>
+                    <li><a href="browse.html?category=design">Design</a></li>
+                    <li><a href="browse.html?category=marketing">Marketing</a></li>
+                    <li><a href="browse.html?category=business">Business</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest roadmaps and career tips</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn small-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CareerCrafter. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
