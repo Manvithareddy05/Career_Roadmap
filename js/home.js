@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Initialize the 3D hero animation
 // testing it out for myself
+//testing for creating Pull request
 function initHero3D() {
     const container = document.getElementById('hero-3d');
     
